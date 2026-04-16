@@ -4,7 +4,7 @@
   <i>Rendered in Blender</i>
 </p>
 
-# 💫 About Me:
+# About Me:
 Hey, I’m **Vishrut Sachan**, a Computer and Communication Engineering student at **MIT Manipal**.
 
 ### Interests:  
@@ -20,7 +20,7 @@ Hey, I’m **Vishrut Sachan**, a Computer and Communication Engineering student 
 
 ---
 
-# 💻 Tech Stack:
+# Stack:
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white) 
@@ -45,7 +45,7 @@ Hey, I’m **Vishrut Sachan**, a Computer and Communication Engineering student 
 ![Bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Android Studio](https://img.shields.io/badge/android%20studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
 
-# 📊 GitHub Stats:
+# GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=Vishrut2403&theme=dark&hide_border=true&include_all_commits=true&count_private=true)
 <br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=Vishrut2403&theme=dark&hide_border=true)
