@@ -45,8 +45,6 @@ Hey, I’m **Vishrut Sachan**, a Computer and Communication Engineering student 
 ![Bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Android Studio](https://img.shields.io/badge/android%20studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
 
-![](https://github-readme-stats.vercel.app/api/github-stats-radar?username=Vishrut2403&theme=tokyonight)
-
 # GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=Vishrut2403&theme=dark&hide_border=true&include_all_commits=true&count_private=true)
 <br/>
