@@ -5,7 +5,7 @@
 </p>
 
 # About Me:
-Hey, I’m **Vishrut Sachan**, a Computer and Communication Engineering student at **MIT Manipal**.
+Hey, I'm **Vishrut Sachan**, a Computer and Communication Engineering student at **MIT Manipal**.
 
 ### Interests:  
 - **Graphics & Systems** – unidirectional/bidirectional path tracing, PBR pipelines, and GPU optimization.
