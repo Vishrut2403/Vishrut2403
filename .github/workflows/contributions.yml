@@ -1,0 +1,51 @@
+name: Update Contributions
+
+on:
+  schedule:
+    # Run every day at 1:00 AM UTC
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-contributions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate contributions markdown
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p docs
+          node .github/scripts/generate-contributions.js
+
+      - name: Check for changes
+        id: git_diff
+        run: |
+          if git diff --quiet docs/contributions.md; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.git_diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git add docs/contributions.md
+          git commit -m "docs: auto-update contributions.md [skip ci]"
+          git rebase -X theirs origin/main
+          git push origin main
