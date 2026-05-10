@@ -18,6 +18,9 @@ Hey, I'm **Vishrut Sachan**, a Computer and Communication Engineering student at
 - **Systems & Graphics Domain**: Focused on high-performance computing and low-level engine architecture using C++ and CUDA.
 - **Optimization & Rendering**: Working with acceleration structures like SAH-BVH and advanced light sampling techniques.
 
+### Contributions:
+I track all my merged PRs and shadow contributions in a dedicated page, auto-updated daily by Github Actions. Click here to view: [Contributions](docs/contributions.md)
+
 ---
 
 # Stack:
@@ -46,8 +49,9 @@ Hey, I'm **Vishrut Sachan**, a Computer and Communication Engineering student at
 ![Android Studio](https://img.shields.io/badge/android%20studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
 
 # GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Vishrut2403&theme=dark&hide_border=true&include_all_commits=true&count_private=true)
-<br/>
-![GitHub Streak](profile/streak-dark.svg)
-<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Vishrut2403&theme=dark&hide_border=true&layout=compact)
+<p align="center">
+  <img src="https://github-readme-stats.shion.dev/api?username=Vishrut2403&theme=dark&hide_border=true&include_all_commits=false&count_private=false&bg_color=000000" height="250">
+  <img src="profile/streak-dark.svg" height="250">
+</p>
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
