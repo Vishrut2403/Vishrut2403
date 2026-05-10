@@ -146,7 +146,7 @@ async function loadManualContributions() {
       console.warn(`  Could not fetch PR ${e.pr_url}: ${err.message}`);
     }
   }
-
+ 
   return enriched;
 }
 
@@ -211,18 +211,27 @@ async function main() {
   md += `This page is automatically updated with all **public** merged pull requests by [@${USERNAME}](https://github.com/${USERNAME})`;
 
   if (manualEntries.length > 0) {
-    md += `, plus **${manualEntries.length}** manually tracked contribution${manualEntries.length > 1 ? "s" : ""} (applied or inspired — see notes)`;
+    md += `, plus **${manualEntries.length}** shadow contribution${manualEntries.length > 1 ? "s" : ""}`;
   }
 
   md += `.\n`;
   md += `Total public PRs merged: **${totalMerged}**`;
-  if (manualEntries.length > 0) md += ` + ${manualEntries.length} manual`;
+  if (manualEntries.length > 0) md += ` + ${manualEntries.length} shadow`;
   md += `\n\n`;
   md += `_Last updated: ${now}_\n\n`;
   md += `---\n\n`;
 
+  for (const [repoName, data] of sortedRepos) {
+    md += `## [${repoName}](${data.url})\n`;
+    for (const pr of data.prs) {
+      md += `- [${pr.title}](${pr.url}) _(merged ${pr.merged})_\n`;
+    }
+    md += "\n";
+  }
+
   if (manualEntries.length > 0) {
-    md += `## Manually Tracked Contributions\n\n`;
+    md += `---\n\n`;
+    md += `## Shadow Contributions\n\n`;
     md += `> These PRs were closed without a GitHub merge, but the work landed upstream or directly led to a fix.\n\n`;
 
     for (const e of manualEntries) {
@@ -233,16 +242,6 @@ async function main() {
       if (e.note) md += `  - _${e.note}_\n`;
       md += `\n`;
     }
-
-    md += `---\n\n`;
-  }
-
-  for (const [repoName, data] of sortedRepos) {
-    md += `## [${repoName}](${data.url})\n`;
-    for (const pr of data.prs) {
-      md += `- [${pr.title}](${pr.url}) _(merged ${pr.merged})_\n`;
-    }
-    md += "\n";
   }
 
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
