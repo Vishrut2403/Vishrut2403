@@ -50,8 +50,8 @@ I track all my merged PRs and shadow contributions in a dedicated page, auto-upd
 
 # GitHub Stats:
 <p align="center">
-  <img src="https://github-readme-stats.shion.dev/api?username=Vishrut2403&theme=dark&hide_border=true&include_all_commits=false&count_private=false&bg_color=000000" height="210">
-  <img src="profile/streak-dark.svg" height="210">
+  <img src="https://github-readme-stats.shion.dev/api?username=Vishrut2403&theme=dark&hide_border=true&include_all_commits=false&count_private=false&bg_color=000000" width="49%">
+  <img src="profile/streak-dark.svg" width="49%">
 </p>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
