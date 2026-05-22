@@ -251,12 +251,20 @@ function renderSVG(stats) {
   const W = 495;
   const H = 195;
 
-  const ORANGE = "#e8793a";
-  const GREEN = "#39d353";
+  const ORANGE = "#f97316";
+  const GREEN = "#23d18b";
   const TEXT_PRIMARY = "#e6edf3";
   const TEXT_MUTED = "#7d8590";
   const BG = "#0d1117";
   const BORDER = "#30363d";
+  const CX = W / 2;
+  const CY = 95;
+
+  const firePath = `M${CX} ${CY - 38} 
+    C${CX + 8} ${CY - 28} ${CX + 22} ${CY - 18} ${CX + 20} ${CY - 4}
+    C${CX + 18} ${CY + 10} ${CX + 10} ${CY + 18} ${CX} ${CY + 22}
+    C${CX - 10} ${CY + 18} ${CX - 18} ${CY + 10} ${CX - 20} ${CY - 4}
+    C${CX - 22} ${CY - 18} ${CX - 8} ${CY - 28} ${CX} ${CY - 38}Z`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <style>
@@ -264,32 +272,34 @@ function renderSVG(stats) {
   </style>
 
   <!-- Background -->
-  <rect width="${W}" height="${H}" rx="6" fill="${BG}" stroke="${BORDER}" stroke-width="1"/>
+  <rect width="${W}" height="${H}" rx="4.5" fill="${BG}"/>
 
   <!-- Dividers -->
-  <line x1="165" y1="20" x2="165" y2="${H - 20}" stroke="${BORDER}" stroke-width="1"/>
-  <line x1="330" y1="20" x2="330" y2="${H - 20}" stroke="${BORDER}" stroke-width="1"/>
+  <line x1="165" y1="28" x2="165" y2="${H - 28}" stroke="${BORDER}" stroke-width="1"/>
+  <line x1="330" y1="28" x2="330" y2="${H - 28}" stroke="${BORDER}" stroke-width="1"/>
 
   <!-- === Total Contributions === -->
-  <text x="82" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="${GREEN}">${total}</text>
-  <text x="82" y="82" text-anchor="middle" font-size="12" fill="${TEXT_PRIMARY}">Total Contributions</text>
-  <text x="82" y="100" text-anchor="middle" font-size="11" fill="${TEXT_MUTED}">GitHub + GitLab + Blender</text>
+  <text x="82" y="55" text-anchor="middle" font-size="36" font-weight="700" fill="${GREEN}">${total}</text>
+  <text x="82" y="80" text-anchor="middle" font-size="14" fill="${TEXT_PRIMARY}">Total Contributions</text>
+  <text x="82" y="98" text-anchor="middle" font-size="12" fill="${TEXT_MUTED}">Past Year</text>
 
-  <!-- === Current Streak === -->
-  <!-- Fire emoji circle -->
-  <circle cx="247" cy="80" r="32" fill="none" stroke="${ORANGE}" stroke-width="3"/>
-  <text x="247" y="72" text-anchor="middle" font-size="20">🔥</text>
-  <text x="247" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="${ORANGE}">${current}</text>
-  <text x="247" y="132" text-anchor="middle" font-size="12" font-weight="600" fill="${ORANGE}">Current Streak</text>
-  <text x="247" y="150" text-anchor="middle" font-size="10" fill="${TEXT_MUTED}">${fmtRange(currentStart, currentEnd)}</text>
+  <!-- === Current Streak — fire circle === -->
+  <!-- Outer glow ring -->
+  <circle cx="${CX}" cy="${CY}" r="48" fill="none" stroke="${ORANGE}" stroke-width="4" opacity="0.15"/>
+  <!-- Main ring -->
+  <circle cx="${CX}" cy="${CY}" r="40" fill="none" stroke="${ORANGE}" stroke-width="4"/>
+  <!-- Fire icon -->
+  <text x="${CX}" y="${CY - 10}" text-anchor="middle" font-size="22">🔥</text>
+  <!-- Streak number -->
+  <text x="${CX}" y="${CY + 18}" text-anchor="middle" font-size="26" font-weight="700" fill="${ORANGE}">${current}</text>
+  <!-- Labels below circle -->
+  <text x="${CX}" y="${CY + 62}" text-anchor="middle" font-size="14" font-weight="600" fill="${ORANGE}">Current Streak</text>
+  <text x="${CX}" y="${CY + 80}" text-anchor="middle" font-size="11" fill="${TEXT_MUTED}">${fmtRange(currentStart, currentEnd)}</text>
 
   <!-- === Longest Streak === -->
-  <text x="412" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="${GREEN}">${longest}</text>
-  <text x="412" y="82" text-anchor="middle" font-size="12" fill="${TEXT_PRIMARY}">Longest Streak</text>
-  <text x="412" y="100" text-anchor="middle" font-size="11" fill="${TEXT_MUTED}">${fmtRange(longestStart, longestEnd)}</text>
-
-  <!-- Platform note -->
-  <text x="${W / 2}" y="${H - 8}" text-anchor="middle" font-size="9" fill="${TEXT_MUTED}">Includes GitHub · GitLab (freedesktop) · Blender Projects</text>
+  <text x="412" y="55" text-anchor="middle" font-size="36" font-weight="700" fill="${GREEN}">${longest}</text>
+  <text x="412" y="80" text-anchor="middle" font-size="14" fill="${TEXT_PRIMARY}">Longest Streak</text>
+  <text x="412" y="98" text-anchor="middle" font-size="11" fill="${TEXT_MUTED}">${fmtRange(longestStart, longestEnd)}</text>
 </svg>`;
 }
 
