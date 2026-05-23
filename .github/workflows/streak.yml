@@ -24,7 +24,7 @@ jobs:
 
       - name: Generate streak SVG
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.STREAK_PAT }}
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: |
           node .github/scripts/generate-streak.js
