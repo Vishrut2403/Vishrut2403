@@ -159,8 +159,9 @@ async function fetchBlender(activeDays) {
 }
 
 function calculateStreaks(activeDays) {
-  const todayIST = dateKeyIST(new Date());
-  const yesterdayIST = dateKeyIST(new Date(Date.now() - 86400000));
+  const now = new Date();
+  const todayIST = now.toISOString().split("T")[0];
+  const yesterdayIST = new Date(Date.now() - 86400000).toISOString().split("T")[0];
 
   // Sort descending
   const sorted = Array.from(activeDays).sort((a, b) => (a > b ? -1 : 1));
