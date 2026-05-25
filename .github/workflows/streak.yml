@@ -1,33 +1,41 @@
 name: Update Streak Stats
-
 on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-
 jobs:
   update-streak:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6
-
-      - name: Generate streak stats (dark)
-        uses: be-next/github-streak-stats-action@v1
+      - uses: actions/checkout@v4
         with:
-          username: ${{ github.repository_owner }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          output-path: profile/streak-dark.svg
-          theme: dark
-          hide-border: true
-
-      - name: Commit and push changes
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generate streak SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/generate-streak.js
+      - name: Check for changes
+        id: git_diff
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
+          git add profile/streak-dark.svg
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Commit and push changes
+        if: steps.git_diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
-          git add profile/*.svg
-          git commit -m "Update streak stats" || exit 0
+          git commit -m "profile: update streak stats [skip ci]"
           git rebase -X theirs origin/main
           git push origin main
