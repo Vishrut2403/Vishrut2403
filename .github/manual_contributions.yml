@@ -7,3 +7,9 @@
   commit_url: https://github.com/fastfetch-cli/fastfetch/commit/528f9f1
   type: inspired
   note: "Maintainer reimplemented via 528f9f1 — runtime check vs config preset"
+
+- pr_url: https://github.com/fish-shell/fish-shell/pull/12714
+  commit_url: https://github.com/fish-shell/fish-shell/commit/411a432
+  type: applied
+  note: "Applied and closed by ridiculousfish via 411a432 with cleanup in d13ab22 — fix stale $PWD after mv $PWD elsewhere"
+  
