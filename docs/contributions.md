@@ -1,7 +1,7 @@
 # Contributions
 
-This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **2** shadow contributions.
-Total public PRs merged: **6** + 2 shadow
+This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
+Total public PRs merged: **6** + 3 shadow
 
 _Last updated: 2026-06-12_
 
@@ -32,4 +32,9 @@ _Last updated: 2026-06-12_
 - [add global.ndigits fallback for all ndigits settings](https://github.com/fastfetch-cli/fastfetch/pull/2270) — **⟳ Inspired upstream fix**
   - Commit: [528f9f1](https://github.com/fastfetch-cli/fastfetch/commit/528f9f1)
   - _Maintainer reimplemented via 528f9f1 — runtime check vs config preset_
+
+### [fish-shell/fish-shell](https://github.com/fish-shell/fish-shell)
+- [env: fix stale $PWD after mv $PWD elsewhere](https://github.com/fish-shell/fish-shell/pull/12714) — **✓ Applied upstream**
+  - Commit: [411a432](https://github.com/fish-shell/fish-shell/commit/411a432)
+  - _Applied and closed by ridiculousfish via 411a432 with cleanup in d13ab22 — fix stale $PWD after mv $PWD elsewhere_
 
