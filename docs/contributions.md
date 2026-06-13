@@ -1,13 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **6** + 3 shadow
+Total public PRs merged: **7** + 3 shadow
 
 _Last updated: 2026-06-13_
 
 ---
 
 ## [RPCS3/rpcs3](https://github.com/RPCS3/rpcs3)
+- [gui: Move download database actions from game list to Manage -> Database submenu](https://github.com/RPCS3/rpcs3/pull/18870) _(merged 2026-06-13)_
 - [game_list: Fix icon display for multi-game collection ISOs](https://github.com/RPCS3/rpcs3/pull/18693) _(merged 2026-05-08)_
 - [game_list: Fix ISO cache bypass in is_from_yml branch for multi-game ISOs](https://github.com/RPCS3/rpcs3/pull/18683) _(merged 2026-05-05)_
 - [game_list: Add multi-game collection support for ISO format discs](https://github.com/RPCS3/rpcs3/pull/18571) _(merged 2026-05-03)_
