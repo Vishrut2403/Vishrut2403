@@ -1,11 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **7** + 3 shadow
+Total public PRs merged: **8** + 3 shadow
 
-_Last updated: 2026-07-21_
+_Last updated: 2026-07-22_
 
 ---
+
+## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
+- [Fix crash when opening mods tab after launching an instance](https://github.com/PrismLauncher/PrismLauncher/pull/5707) _(merged 2026-07-21)_
 
 ## [RPCS3/rpcs3](https://github.com/RPCS3/rpcs3)
 - [gui: Move download database actions from game list to Manage -> Database submenu](https://github.com/RPCS3/rpcs3/pull/18870) _(merged 2026-06-13)_
