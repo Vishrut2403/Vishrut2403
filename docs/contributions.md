@@ -1,13 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **9** + 3 shadow
+Total public PRs merged: **10** + 3 shadow
 
-_Last updated: 2026-07-25_
+_Last updated: 2026-07-26_
 
 ---
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
+- [Prevent renaming instance folder while instance is running](https://github.com/PrismLauncher/PrismLauncher/pull/5822) _(merged 2026-07-25)_
 - [Fix instance shortcuts breaking when the instance is renamed](https://github.com/PrismLauncher/PrismLauncher/pull/5816) _(merged 2026-07-22)_
 - [Fix crash when opening mods tab after launching an instance](https://github.com/PrismLauncher/PrismLauncher/pull/5707) _(merged 2026-07-21)_
 
