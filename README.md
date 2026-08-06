@@ -13,7 +13,7 @@ Hey, I'm **Vishrut Sachan**, a Computer and Communication Engineering student at
 - **Full-Stack Stuff** – Building systems like distributed render farms with high-concurrency.
 
 ### Work:  
-- **Active Open Source Contributor**: Spending my free time breaking and fixing code for the **RPCS3** and **PCSX2** emulators.
+- **Active Open Source Contributor**: Spending my free time breaking and fixing code for the **RPCS3** and **PrismLauncher**.
 - **Blender Head & Taskphase Lead** @ **[VARISE](https://github.com/Project-V-ARISE)**: Mentored 100+ students and developed VR simulators
 - **Systems & Graphics Domain**: Focused on high-performance computing and low-level engine architecture using C++ and CUDA.
 - **Optimization & Rendering**: Working with acceleration structures like SAH-BVH and advanced light sampling techniques.
