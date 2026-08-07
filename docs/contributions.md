@@ -1,13 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **15** + 3 shadow
+Total public PRs merged: **16** + 3 shadow
 
-_Last updated: 2026-08-06_
+_Last updated: 2026-08-07_
 
 ---
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
+- [Allow selecting instance directory when creating a new instance](https://github.com/PrismLauncher/PrismLauncher/pull/5870) _(merged 2026-08-06)_
 - [Migrate legacy instgroups.json to new location](https://github.com/PrismLauncher/PrismLauncher/pull/5894) _(merged 2026-08-05)_
 - [Add support for multiple instance directories](https://github.com/PrismLauncher/PrismLauncher/pull/5827) _(merged 2026-07-31)_
 - [Load world metadata asynchronously to avoid blocking UI thread](https://github.com/PrismLauncher/PrismLauncher/pull/5845) _(merged 2026-07-28)_
