@@ -1,13 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **17** + 3 shadow
+Total public PRs merged: **18** + 3 shadow
 
-_Last updated: 2026-08-12_
+_Last updated: 2026-08-13_
 
 ---
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
+- [fix: regenerate instance UUID on import](https://github.com/PrismLauncher/PrismLauncher/pull/5930) _(merged 2026-08-12)_
 - [Add persistent global playtime counter](https://github.com/PrismLauncher/PrismLauncher/pull/5881) _(merged 2026-08-07)_
 - [Allow selecting instance directory when creating a new instance](https://github.com/PrismLauncher/PrismLauncher/pull/5870) _(merged 2026-08-06)_
 - [Migrate legacy instgroups.json to new location](https://github.com/PrismLauncher/PrismLauncher/pull/5894) _(merged 2026-08-05)_
