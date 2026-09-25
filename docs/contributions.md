@@ -1,14 +1,16 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **22** + 3 shadow
+Total public PRs merged: **24** + 3 shadow
 
-_Last updated: 2026-09-24_
+_Last updated: 2026-09-25_
 
 ---
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
 - [Make version name and build optional in Java meta](https://github.com/PrismLauncher/PrismLauncher/pull/6159) _(merged 2026-09-24)_
+- [Show extraction progress when importing worlds](https://github.com/PrismLauncher/PrismLauncher/pull/6149) _(merged 2026-09-24)_
+- [Fill PR labels from linked issues](https://github.com/PrismLauncher/PrismLauncher/pull/6139) _(merged 2026-09-24)_
 - [Show version column for resource and shader packs](https://github.com/PrismLauncher/PrismLauncher/pull/6125) _(merged 2026-09-20)_
 - [Dedupe instance dir names](https://github.com/PrismLauncher/PrismLauncher/pull/6110) _(merged 2026-09-20)_
 - [fix: don't show folders in mod list](https://github.com/PrismLauncher/PrismLauncher/pull/6086) _(merged 2026-09-15)_
