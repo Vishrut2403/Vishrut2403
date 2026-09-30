@@ -1,13 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **26** + 3 shadow
+Total public PRs merged: **27** + 3 shadow
 
 _Last updated: 2026-09-30_
 
 ---
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
+- [Fix hard link count warning for disabled tracked mods](https://github.com/PrismLauncher/PrismLauncher/pull/6194) _(merged 2026-09-30)_
 - [Keep en_US completeness](https://github.com/PrismLauncher/PrismLauncher/pull/6187) _(merged 2026-09-28)_
 - [feat: add Launch As account submenu to launch menu](https://github.com/PrismLauncher/PrismLauncher/pull/6142) _(merged 2026-09-27)_
 - [Make version name and build optional in Java meta](https://github.com/PrismLauncher/PrismLauncher/pull/6159) _(merged 2026-09-24)_
