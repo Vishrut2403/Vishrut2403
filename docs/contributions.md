@@ -1,11 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **30** + 3 shadow
+Total public PRs merged: **31** + 3 shadow
 
-_Last updated: 2026-10-07_
+_Last updated: 2026-10-08_
 
 ---
+
+## [blender/blender](https://projects.blender.org/blender/blender)
+- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
 - [Fix account buttons disabled after adding a Microsoft account](https://github.com/PrismLauncher/PrismLauncher/pull/6204) _(merged 2026-10-03)_

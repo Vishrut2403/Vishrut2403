@@ -9,6 +9,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 if (!GITHUB_TOKEN) throw new Error("Missing GITHUB_TOKEN environment variable");
 
 const USERNAME = "Vishrut2403";
+const BLENDER_USERNAME = "vishydaperry";
 const API_BASE = "https://api.github.com";
 const MANUAL_FILE = path.resolve(".github/manual_contributions.yml");
 const OUT_FILE = path.resolve("docs/contributions.md");
@@ -62,6 +63,21 @@ async function fetchMergedPRs() {
     page++;
   }
 
+  return all;
+}
+
+// Blender merges on its own Gitea, so these PRs never show up in GitHub search.
+async function fetchBlenderPRs() {
+  const all = [];
+  for (let page = 1; ; page++) {
+    const res = await fetch(
+      `https://projects.blender.org/api/v1/repos/blender/blender/issues?type=pulls&state=closed&created_by=${BLENDER_USERNAME}&limit=50&page=${page}`
+    );
+    if (!res.ok) throw new Error(`Blender API ${res.status} ${res.statusText}`);
+    const items = await res.json();
+    all.push(...items.filter((i) => i.pull_request?.merged));
+    if (items.length < 50) break;
+  }
   return all;
 }
 
@@ -187,6 +203,24 @@ async function main() {
       merged: fmtDate(pr.closed_at),
       type: "merged",
     });
+  }
+
+  try {
+    const blenderPRs = await fetchBlenderPRs();
+    console.log(`Found ${blenderPRs.length} merged PRs on projects.blender.org`);
+    if (blenderPRs.length) {
+      repoMap.set("blender/blender", {
+        url: "https://projects.blender.org/blender/blender",
+        prs: blenderPRs.map((pr) => ({
+          title: pr.title,
+          url: pr.html_url,
+          merged: fmtDate(pr.pull_request.merged_at),
+          type: "merged",
+        })),
+      });
+    }
+  } catch (err) {
+    console.warn(`  Could not fetch Blender PRs: ${err.message}`);
   }
 
   for (const data of repoMap.values()) {
