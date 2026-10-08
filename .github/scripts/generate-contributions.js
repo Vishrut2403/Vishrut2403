@@ -13,6 +13,7 @@ const BLENDER_USERNAME = "vishydaperry";
 const API_BASE = "https://api.github.com";
 const MANUAL_FILE = path.resolve(".github/manual_contributions.yml");
 const OUT_FILE = path.resolve("docs/contributions.md");
+const PRS_FILE = path.resolve("profile/prs.json");
 
 async function ghRequest(urlPath, params = {}, retries = 3) {
   const url = new URL(API_BASE + urlPath);
@@ -281,6 +282,11 @@ async function main() {
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.writeFileSync(OUT_FILE, md);
   console.log(`✓ Written to ${OUT_FILE}`);
+
+  // Read by generate-streak.js to draw the PR count on the streak card.
+  fs.mkdirSync(path.dirname(PRS_FILE), { recursive: true });
+  fs.writeFileSync(PRS_FILE, JSON.stringify({ merged: totalMerged, shadow: manualEntries.length }) + "\n");
+  console.log(`✓ Written to ${PRS_FILE}`);
 }
 
 main().catch((err) => {

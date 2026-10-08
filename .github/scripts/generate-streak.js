@@ -9,6 +9,7 @@ if (!GITHUB_TOKEN) throw new Error("Missing GITHUB_TOKEN");
 
 const GITHUB_USERNAME = "Vishrut2403";
 const OUT_FILE = path.resolve("profile/streak-dark.svg");
+const PRS_FILE = path.resolve("profile/prs.json"); // written by generate-contributions.js
 const DAYS = 365;
 
 function toIST(date) {
@@ -127,7 +128,7 @@ function fmtRange(start, end) {
   return `${fmt(start)} - ${fmt(end)}`;
 }
 
-function renderSVG({ current, longest, total, currentStart, currentEnd, longestStart, longestEnd }) {
+function renderSVG({ current, longest, total, currentStart, currentEnd, longestStart, longestEnd, prs }) {
   const W = 495, H = 195;
   const ORANGE = "#f97316", GREEN = "#23d18b";
   const TEXT_PRIMARY = "#e6edf3", TEXT_MUTED = "#7d8590";
@@ -143,7 +144,10 @@ function renderSVG({ current, longest, total, currentStart, currentEnd, longestS
   <line x1="330" y1="28" x2="330" y2="${H - 28}" stroke="${BORDER}" stroke-width="1"/>
   <text x="82" y="55" text-anchor="middle" font-size="36" font-weight="700" fill="${GREEN}">${total}</text>
   <text x="82" y="80" text-anchor="middle" font-size="14" fill="${TEXT_PRIMARY}">Total Contributions</text>
-  <text x="82" y="98" text-anchor="middle" font-size="12" fill="${TEXT_MUTED}">Past Year</text>
+  <text x="82" y="98" text-anchor="middle" font-size="12" fill="${TEXT_MUTED}">Past Year</text>${prs ? `
+  <text x="82" y="140" text-anchor="middle" font-size="26" font-weight="700" fill="${GREEN}">${prs.merged}</text>
+  <text x="82" y="160" text-anchor="middle" font-size="14" fill="${TEXT_PRIMARY}">PRs Merged</text>
+  <text x="82" y="176" text-anchor="middle" font-size="11" fill="${TEXT_MUTED}">+${prs.shadow} landed upstream</text>` : ""}
   <circle cx="${CX}" cy="${CY}" r="48" fill="none" stroke="${ORANGE}" stroke-width="4" opacity="0.15"/>
   <circle cx="${CX}" cy="${CY}" r="40" fill="none" stroke="${ORANGE}" stroke-width="4"/>
   <text x="${CX}" y="${CY - 10}" text-anchor="middle" font-size="22">🔥</text>
@@ -166,7 +170,14 @@ async function main() {
   console.log(`Longest streak: ${stats.longest} days`);
   console.log(`Total contributions: ${total}`);
 
-  const svg = renderSVG({ ...stats, total });
+  let prs = null;
+  try {
+    prs = JSON.parse(fs.readFileSync(PRS_FILE, "utf8"));
+  } catch {
+    console.warn(`  No ${PRS_FILE}, drawing card without PR count`);
+  }
+
+  const svg = renderSVG({ ...stats, total, prs });
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.writeFileSync(OUT_FILE, svg);
   console.log(`✓ Written to ${OUT_FILE}`);

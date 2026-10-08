@@ -1,7 +1,8 @@
 name: Update Streak Stats
 on:
   schedule:
-    - cron: '0 0 * * *'
+    # 1hr after contributions.yml, so profile/prs.json is fresh
+    - cron: '0 1 * * *'
   workflow_dispatch:
 jobs:
   update-streak:

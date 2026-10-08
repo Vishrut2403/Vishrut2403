@@ -2,8 +2,8 @@ name: Update Contributions
 
 on:
   schedule:
-    # Run every day at 1:00 AM UTC (6:30 AM IST, 1hr after streak.yml at 5:30 AM IST)
-    - cron: "0 1 * * *"
+    # Run every day at 12:00 AM UTC (5:30 AM IST), 1hr before streak.yml, which reads profile/prs.json
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
       - name: Check for changes
         id: git_diff
         run: |
-          git add docs/contributions.md
+          git add docs/contributions.md profile/prs.json
           if git diff --cached --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
