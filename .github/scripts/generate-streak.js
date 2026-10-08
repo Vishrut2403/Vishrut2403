@@ -11,15 +11,6 @@ const GITHUB_USERNAME = "Vishrut2403";
 const OUT_FILE = path.resolve("profile/streak-dark.svg");
 const DAYS = 365;
 
-const COUNTED_EVENTS = new Set([
-  "PushEvent",
-  "PullRequestReviewEvent",
-  "PullRequestEvent",
-  "PullRequestReviewCommentEvent",
-  "IssueCommentEvent",
-  "IssuesEvent",
-]);
-
 function toIST(date) {
   return new Date(date.getTime() + 5.5 * 60 * 60 * 1000).toISOString().split("T")[0];
 }
@@ -54,12 +45,10 @@ async function fetchGraphQLDays(activeDays) {
     body: JSON.stringify({ query }),
   });
 
-  if (!res.ok) {
-    console.warn("  GraphQL error:", res.status);
-    return 0;
-  }
-
+  // Throw instead of returning 0, so a failed run keeps the old SVG.
+  if (!res.ok) throw new Error(`GraphQL HTTP ${res.status}`);
   const data = await res.json();
+  if (data.errors) throw new Error(`GraphQL: ${JSON.stringify(data.errors)}`);
   const collection = data?.data?.user?.contributionsCollection;
   const weeks = collection?.contributionCalendar?.weeks || [];
 
@@ -74,47 +63,6 @@ async function fetchGraphQLDays(activeDays) {
   }
   console.log(`  GraphQL: ${count} active days`);
   return collection?.contributionCalendar?.totalContributions ?? 0;
-}
-
-async function fetchEventsDays(activeDays) {
-  console.log("Fetching GitHub events (Events API)...");
-  let page = 1;
-  let added = 0;
-
-  while (true) {
-    const res = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=100&page=${page}`,
-      {
-        headers: {
-          Authorization: `Bearer ${GITHUB_TOKEN}`,
-          Accept: "application/json",
-        },
-      }
-    );
-
-    if (res.status === 422 || res.status === 404) break;
-    if (!res.ok) {
-      console.warn(`  Events API error ${res.status} on page ${page}`);
-      break;
-    }
-
-    const events = await res.json();
-    if (!events.length) break;
-
-    for (const e of events) {
-      if (!COUNTED_EVENTS.has(e.type)) continue;
-      const day = toIST(new Date(e.created_at));
-      if (!activeDays.has(day)) {
-        activeDays.add(day);
-        added++;
-      }
-    }
-
-    if (events.length < 100) break;
-    page++;
-  }
-
-  console.log(`  Events API: ${added} new days added`);
 }
 
 function calculateStreaks(activeDays) {
@@ -211,9 +159,7 @@ function renderSVG({ current, longest, total, currentStart, currentEnd, longestS
 async function main() {
   const activeDays = new Set();
   const total = await fetchGraphQLDays(activeDays);
-  await fetchEventsDays(activeDays);
-
-  console.log(`\nTotal active days (merged): ${activeDays.size}`);
+  console.log(`\nTotal active days: ${activeDays.size}`);
 
   const stats = calculateStreaks(activeDays);
   console.log(`Current streak: ${stats.current} days`);
