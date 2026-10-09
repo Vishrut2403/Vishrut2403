@@ -8,7 +8,7 @@
   <text x="82" y="55" text-anchor="middle" font-size="36" font-weight="700" fill="#23d18b">864</text>
   <text x="82" y="80" text-anchor="middle" font-size="14" fill="#e6edf3">Total Contributions</text>
   <text x="82" y="98" text-anchor="middle" font-size="12" fill="#7d8590">Past Year</text>
-  <text x="82" y="140" text-anchor="middle" font-size="26" font-weight="700" fill="#23d18b">32</text>
+  <text x="82" y="140" text-anchor="middle" font-size="26" font-weight="700" fill="#23d18b">33</text>
   <text x="82" y="160" text-anchor="middle" font-size="14" fill="#e6edf3">PRs Merged</text>
   <text x="82" y="176" text-anchor="middle" font-size="11" fill="#7d8590">+3 landed upstream</text>
   <circle cx="247.5" cy="95" r="48" fill="none" stroke="#f97316" stroke-width="4" opacity="0.15"/>
