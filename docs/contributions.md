@@ -1,13 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **31** + 3 shadow
+Total public PRs merged: **32** + 3 shadow
 
-_Last updated: 2026-10-08_
+_Last updated: 2026-10-09_
 
 ---
 
 ## [blender/blender](https://projects.blender.org/blender/blender)
+- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
 - [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
