@@ -1,11 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **33** + 3 shadow
+Total public PRs merged: **34** + 3 shadow
 
 _Last updated: 2026-10-13_
 
 ---
+
+## [tryhard-26/xerxes](https://github.com/tryhard-26/xerxes)
+- [Support indexing mount points outside $HOME](https://github.com/tryhard-26/xerxes/pull/2) _(merged 2026-10-13)_
 
 ## [blender/blender](https://projects.blender.org/blender/blender)
 - [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
