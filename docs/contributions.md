@@ -1,13 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **34** + 3 shadow
+Total public PRs merged: **35** + 3 shadow
 
 _Last updated: 2026-10-15_
 
 ---
 
 ## [tryhard-26/xerxes](https://github.com/tryhard-26/xerxes)
+- [Skip missing directories in search results](https://github.com/tryhard-26/xerxes/pull/3) _(merged 2026-10-15)_
 - [Support indexing mount points outside $HOME](https://github.com/tryhard-26/xerxes/pull/2) _(merged 2026-10-13)_
 
 ## [blender/blender](https://projects.blender.org/blender/blender)
