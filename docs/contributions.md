@@ -1,11 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **35** + 3 shadow
+Total public PRs merged: **36** + 3 shadow
 
 _Last updated: 2026-10-18_
 
 ---
+
+## [BlueMap-Minecraft/BlueMap](https://github.com/BlueMap-Minecraft/BlueMap)
+- [Inset liquid faces to fix z-fighting with waterlogged blocks](https://github.com/BlueMap-Minecraft/BlueMap/pull/892) _(merged 2026-10-18)_
 
 ## [tryhard-26/xerxes](https://github.com/tryhard-26/xerxes)
 - [Skip missing directories in search results](https://github.com/tryhard-26/xerxes/pull/3) _(merged 2026-10-15)_
