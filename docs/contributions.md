@@ -1,11 +1,17 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **36** + 3 shadow
+Total public PRs merged: **37** + 3 shadow
 
 _Last updated: 2026-10-21_
 
 ---
+
+## [blender/blender](https://projects.blender.org/blender/blender)
+- [Fix #162197: Compositor: Dither stays after turning off backdrop](https://projects.blender.org/blender/blender/pulls/164711) _(merged 2026-10-21)_
+- [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
+- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
+- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
 
 ## [BlueMap-Minecraft/BlueMap](https://github.com/BlueMap-Minecraft/BlueMap)
 - [Inset liquid faces to fix z-fighting with waterlogged blocks](https://github.com/BlueMap-Minecraft/BlueMap/pull/892) _(merged 2026-10-18)_
@@ -13,11 +19,6 @@ _Last updated: 2026-10-21_
 ## [tryhard-26/xerxes](https://github.com/tryhard-26/xerxes)
 - [Skip missing directories in search results](https://github.com/tryhard-26/xerxes/pull/3) _(merged 2026-10-15)_
 - [Support indexing mount points outside $HOME](https://github.com/tryhard-26/xerxes/pull/2) _(merged 2026-10-13)_
-
-## [blender/blender](https://projects.blender.org/blender/blender)
-- [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
-- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
-- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
 - [Fix account buttons disabled after adding a Microsoft account](https://github.com/PrismLauncher/PrismLauncher/pull/6204) _(merged 2026-10-03)_
