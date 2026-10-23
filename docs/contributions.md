@@ -1,7 +1,7 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **38** + 3 shadow
+Total public PRs merged: **39** + 3 shadow
 
 _Last updated: 2026-10-23_
 
@@ -18,20 +18,8 @@ _Last updated: 2026-10-23_
 - [ISO: Add metadata cache to speed up game list scanning](https://github.com/RPCS3/rpcs3/pull/18546) _(merged 2026-04-12)_
 - [game_list_table: Allow reordering game list columns](https://github.com/RPCS3/rpcs3/pull/18492) _(merged 2026-04-04)_
 
-## [blender/blender](https://projects.blender.org/blender/blender)
-- [Fix #162197: Compositor: Dither stays after turning off backdrop](https://projects.blender.org/blender/blender/pulls/164711) _(merged 2026-10-21)_
-- [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
-- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
-- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
-
-## [BlueMap-Minecraft/BlueMap](https://github.com/BlueMap-Minecraft/BlueMap)
-- [Inset liquid faces to fix z-fighting with waterlogged blocks](https://github.com/BlueMap-Minecraft/BlueMap/pull/892) _(merged 2026-10-18)_
-
-## [tryhard-26/xerxes](https://github.com/tryhard-26/xerxes)
-- [Skip missing directories in search results](https://github.com/tryhard-26/xerxes/pull/3) _(merged 2026-10-15)_
-- [Support indexing mount points outside $HOME](https://github.com/tryhard-26/xerxes/pull/2) _(merged 2026-10-13)_
-
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
+- [Select newly added icon in icon picker](https://github.com/PrismLauncher/PrismLauncher/pull/6305) _(merged 2026-10-23)_
 - [Fix account buttons disabled after adding a Microsoft account](https://github.com/PrismLauncher/PrismLauncher/pull/6204) _(merged 2026-10-03)_
 - [Extract natives into symlinked instances](https://github.com/PrismLauncher/PrismLauncher/pull/6202) _(merged 2026-10-03)_
 - [Fix hard link count warning for disabled tracked mods](https://github.com/PrismLauncher/PrismLauncher/pull/6194) _(merged 2026-09-30)_
@@ -53,6 +41,19 @@ _Last updated: 2026-10-23_
 - [Prevent renaming instance folder while instance is running](https://github.com/PrismLauncher/PrismLauncher/pull/5822) _(merged 2026-07-25)_
 - [Fix instance shortcuts breaking when the instance is renamed](https://github.com/PrismLauncher/PrismLauncher/pull/5816) _(merged 2026-07-22)_
 - [Fix crash when opening mods tab after launching an instance](https://github.com/PrismLauncher/PrismLauncher/pull/5707) _(merged 2026-07-21)_
+
+## [blender/blender](https://projects.blender.org/blender/blender)
+- [Fix #162197: Compositor: Dither stays after turning off backdrop](https://projects.blender.org/blender/blender/pulls/164711) _(merged 2026-10-21)_
+- [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
+- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
+- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
+
+## [BlueMap-Minecraft/BlueMap](https://github.com/BlueMap-Minecraft/BlueMap)
+- [Inset liquid faces to fix z-fighting with waterlogged blocks](https://github.com/BlueMap-Minecraft/BlueMap/pull/892) _(merged 2026-10-18)_
+
+## [tryhard-26/xerxes](https://github.com/tryhard-26/xerxes)
+- [Skip missing directories in search results](https://github.com/tryhard-26/xerxes/pull/3) _(merged 2026-10-15)_
+- [Support indexing mount points outside $HOME](https://github.com/tryhard-26/xerxes/pull/2) _(merged 2026-10-13)_
 
 ## [PCSX2/pcsx2](https://github.com/PCSX2/pcsx2)
 - [Qt: Fix Big Picture Mode mnemonic shortcut lost after state change](https://github.com/PCSX2/pcsx2/pull/14245) _(merged 2026-05-03)_
