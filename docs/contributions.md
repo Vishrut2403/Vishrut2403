@@ -1,24 +1,14 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **39** + 3 shadow
+Total public PRs merged: **40** + 3 shadow
 
-_Last updated: 2026-10-28_
+_Last updated: 2026-10-29_
 
 ---
 
-## [RPCS3/rpcs3](https://github.com/RPCS3/rpcs3)
-- [ci: Label AI co-authored PRs and match [TESTERS NEEDED] rsx titles](https://github.com/RPCS3/rpcs3/pull/19922) _(merged 2026-10-23)_
-- [ci: Auto-label PRs from title and linked issues](https://github.com/RPCS3/rpcs3/pull/19630) _(merged 2026-10-01)_
-- [overlay: Add trophy list sorting options](https://github.com/RPCS3/rpcs3/pull/18965) _(merged 2026-07-31)_
-- [gui: Move download database actions from game list to Manage -> Database submenu](https://github.com/RPCS3/rpcs3/pull/18870) _(merged 2026-06-13)_
-- [game_list: Fix icon display for multi-game collection ISOs](https://github.com/RPCS3/rpcs3/pull/18693) _(merged 2026-05-08)_
-- [game_list: Fix ISO cache bypass in is_from_yml branch for multi-game ISOs](https://github.com/RPCS3/rpcs3/pull/18683) _(merged 2026-05-05)_
-- [game_list: Add multi-game collection support for ISO format discs](https://github.com/RPCS3/rpcs3/pull/18571) _(merged 2026-05-03)_
-- [ISO: Add metadata cache to speed up game list scanning](https://github.com/RPCS3/rpcs3/pull/18546) _(merged 2026-04-12)_
-- [game_list_table: Allow reordering game list columns](https://github.com/RPCS3/rpcs3/pull/18492) _(merged 2026-04-04)_
-
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
+- [Update tree scrollbar when toggling resource columns](https://github.com/PrismLauncher/PrismLauncher/pull/6365) _(merged 2026-10-28)_
 - [Select newly added icon in icon picker](https://github.com/PrismLauncher/PrismLauncher/pull/6305) _(merged 2026-10-23)_
 - [Fix account buttons disabled after adding a Microsoft account](https://github.com/PrismLauncher/PrismLauncher/pull/6204) _(merged 2026-10-03)_
 - [Extract natives into symlinked instances](https://github.com/PrismLauncher/PrismLauncher/pull/6202) _(merged 2026-10-03)_
@@ -41,6 +31,17 @@ _Last updated: 2026-10-28_
 - [Prevent renaming instance folder while instance is running](https://github.com/PrismLauncher/PrismLauncher/pull/5822) _(merged 2026-07-25)_
 - [Fix instance shortcuts breaking when the instance is renamed](https://github.com/PrismLauncher/PrismLauncher/pull/5816) _(merged 2026-07-22)_
 - [Fix crash when opening mods tab after launching an instance](https://github.com/PrismLauncher/PrismLauncher/pull/5707) _(merged 2026-07-21)_
+
+## [RPCS3/rpcs3](https://github.com/RPCS3/rpcs3)
+- [ci: Label AI co-authored PRs and match [TESTERS NEEDED] rsx titles](https://github.com/RPCS3/rpcs3/pull/19922) _(merged 2026-10-23)_
+- [ci: Auto-label PRs from title and linked issues](https://github.com/RPCS3/rpcs3/pull/19630) _(merged 2026-10-01)_
+- [overlay: Add trophy list sorting options](https://github.com/RPCS3/rpcs3/pull/18965) _(merged 2026-07-31)_
+- [gui: Move download database actions from game list to Manage -> Database submenu](https://github.com/RPCS3/rpcs3/pull/18870) _(merged 2026-06-13)_
+- [game_list: Fix icon display for multi-game collection ISOs](https://github.com/RPCS3/rpcs3/pull/18693) _(merged 2026-05-08)_
+- [game_list: Fix ISO cache bypass in is_from_yml branch for multi-game ISOs](https://github.com/RPCS3/rpcs3/pull/18683) _(merged 2026-05-05)_
+- [game_list: Add multi-game collection support for ISO format discs](https://github.com/RPCS3/rpcs3/pull/18571) _(merged 2026-05-03)_
+- [ISO: Add metadata cache to speed up game list scanning](https://github.com/RPCS3/rpcs3/pull/18546) _(merged 2026-04-12)_
+- [game_list_table: Allow reordering game list columns](https://github.com/RPCS3/rpcs3/pull/18492) _(merged 2026-04-04)_
 
 ## [blender/blender](https://projects.blender.org/blender/blender)
 - [Fix #162197: Compositor: Dither stays after turning off backdrop](https://projects.blender.org/blender/blender/pulls/164711) _(merged 2026-10-21)_
