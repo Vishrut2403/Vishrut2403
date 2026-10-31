@@ -1,11 +1,15 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **40** + 3 shadow
+Total public PRs merged: **41** + 3 shadow
 
-_Last updated: 2026-10-30_
+_Last updated: 2026-10-31_
 
 ---
+
+## [PCSX2/pcsx2](https://github.com/PCSX2/pcsx2)
+- [ImGui: Add visual vibration intensity indicator to OSD](https://github.com/PCSX2/pcsx2/pull/14230) _(merged 2026-10-30)_
+- [Qt: Fix Big Picture Mode mnemonic shortcut lost after state change](https://github.com/PCSX2/pcsx2/pull/14245) _(merged 2026-05-03)_
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
 - [Update tree scrollbar when toggling resource columns](https://github.com/PrismLauncher/PrismLauncher/pull/6365) _(merged 2026-10-28)_
@@ -55,9 +59,6 @@ _Last updated: 2026-10-30_
 ## [tryhard-26/xerxes](https://github.com/tryhard-26/xerxes)
 - [Skip missing directories in search results](https://github.com/tryhard-26/xerxes/pull/3) _(merged 2026-10-15)_
 - [Support indexing mount points outside $HOME](https://github.com/tryhard-26/xerxes/pull/2) _(merged 2026-10-13)_
-
-## [PCSX2/pcsx2](https://github.com/PCSX2/pcsx2)
-- [Qt: Fix Big Picture Mode mnemonic shortcut lost after state change](https://github.com/PCSX2/pcsx2/pull/14245) _(merged 2026-05-03)_
 
 ---
 
