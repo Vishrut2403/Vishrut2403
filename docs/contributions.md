@@ -1,11 +1,22 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **41** + 3 shadow
+Total public PRs merged: **46** + 3 shadow
 
 _Last updated: 2026-11-06_
 
 ---
+
+## [blender/blender](https://projects.blender.org/blender/blender)
+- [Fix #158457: VSE: Retiming keys can be used when they are hidden](https://projects.blender.org/blender/blender/pulls/165635) _(merged 2026-11-06)_
+- [Fix #165314: VSE: Cache not invalidated when changing tracking settings](https://projects.blender.org/blender/blender/pulls/165462) _(merged 2026-11-06)_
+- [Fix #158765: VSE: move_to_meta does not update the meta strip render](https://projects.blender.org/blender/blender/pulls/165207) _(merged 2026-11-06)_
+- [Fix #164348: VSE: Retiming speed label disappears at left view edge](https://projects.blender.org/blender/blender/pulls/165088) _(merged 2026-11-06)_
+- [Fix #164353: VSE: Strip duration label can show a wrong value](https://projects.blender.org/blender/blender/pulls/165018) _(merged 2026-11-06)_
+- [Fix #162197: Compositor: Dither stays after turning off backdrop](https://projects.blender.org/blender/blender/pulls/164711) _(merged 2026-10-21)_
+- [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
+- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
+- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
 
 ## [PCSX2/pcsx2](https://github.com/PCSX2/pcsx2)
 - [ImGui: Add visual vibration intensity indicator to OSD](https://github.com/PCSX2/pcsx2/pull/14230) _(merged 2026-10-30)_
@@ -46,12 +57,6 @@ _Last updated: 2026-11-06_
 - [game_list: Add multi-game collection support for ISO format discs](https://github.com/RPCS3/rpcs3/pull/18571) _(merged 2026-05-03)_
 - [ISO: Add metadata cache to speed up game list scanning](https://github.com/RPCS3/rpcs3/pull/18546) _(merged 2026-04-12)_
 - [game_list_table: Allow reordering game list columns](https://github.com/RPCS3/rpcs3/pull/18492) _(merged 2026-04-04)_
-
-## [blender/blender](https://projects.blender.org/blender/blender)
-- [Fix #162197: Compositor: Dither stays after turning off backdrop](https://projects.blender.org/blender/blender/pulls/164711) _(merged 2026-10-21)_
-- [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
-- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
-- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
 
 ## [BlueMap-Minecraft/BlueMap](https://github.com/BlueMap-Minecraft/BlueMap)
 - [Inset liquid faces to fix z-fighting with waterlogged blocks](https://github.com/BlueMap-Minecraft/BlueMap/pull/892) _(merged 2026-10-18)_
