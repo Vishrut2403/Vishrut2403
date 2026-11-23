@@ -1,7 +1,7 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **48** + 3 shadow
+Total public PRs merged: **49** + 3 shadow
 
 _Last updated: 2026-11-23_
 
@@ -9,6 +9,7 @@ _Last updated: 2026-11-23_
 
 ## [blender/blender](https://projects.blender.org/blender/blender)
 - [Fix #114252: VSE: Hard split of a meta strip leaves an empty tail](https://projects.blender.org/blender/blender/pulls/167010) _(merged 2026-11-23)_
+- [Fix #158256: VSE: Switch View node always uses its first input](https://projects.blender.org/blender/blender/pulls/166371) _(merged 2026-11-23)_
 - [Fix #158457: VSE: Retiming keys can be used when they are hidden](https://projects.blender.org/blender/blender/pulls/165635) _(merged 2026-11-06)_
 - [Fix #165314: VSE: Cache not invalidated when changing tracking settings](https://projects.blender.org/blender/blender/pulls/165462) _(merged 2026-11-06)_
 - [Fix #158765: VSE: move_to_meta does not update the meta strip render](https://projects.blender.org/blender/blender/pulls/165207) _(merged 2026-11-06)_
