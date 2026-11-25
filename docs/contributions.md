@@ -1,11 +1,24 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **38** + 3 shadow
+Total public PRs merged: **49** + 3 shadow
 
-_Last updated: 2026-11-24_
+_Last updated: 2026-11-25_
 
 ---
+
+## [blender/blender](https://projects.blender.org/blender/blender)
+- [Fix #114252: VSE: Hard split of a meta strip leaves an empty tail](https://projects.blender.org/blender/blender/pulls/167010) _(merged 2026-11-23)_
+- [Fix #158256: VSE: Switch View node always uses its first input](https://projects.blender.org/blender/blender/pulls/166371) _(merged 2026-11-23)_
+- [Fix #158457: VSE: Retiming keys can be used when they are hidden](https://projects.blender.org/blender/blender/pulls/165635) _(merged 2026-11-06)_
+- [Fix #165314: VSE: Cache not invalidated when changing tracking settings](https://projects.blender.org/blender/blender/pulls/165462) _(merged 2026-11-06)_
+- [Fix #158765: VSE: move_to_meta does not update the meta strip render](https://projects.blender.org/blender/blender/pulls/165207) _(merged 2026-11-06)_
+- [Fix #164348: VSE: Retiming speed label disappears at left view edge](https://projects.blender.org/blender/blender/pulls/165088) _(merged 2026-11-06)_
+- [Fix #164353: VSE: Strip duration label can show a wrong value](https://projects.blender.org/blender/blender/pulls/165018) _(merged 2026-11-06)_
+- [Fix #162197: Compositor: Dither stays after turning off backdrop](https://projects.blender.org/blender/blender/pulls/164711) _(merged 2026-10-21)_
+- [Fix #164359: VSE: Clear Offset does not update attached transitions](https://projects.blender.org/blender/blender/pulls/164936) _(merged 2026-10-09)_
+- [Fix #161596: VSE: Animated color and text strips not updating](https://projects.blender.org/blender/blender/pulls/164862) _(merged 2026-10-08)_
+- [Fix #158472: Node Editor: Sidebar missing in some old files](https://projects.blender.org/blender/blender/pulls/164790) _(merged 2026-10-07)_
 
 ## [PrismLauncher/PrismLauncher](https://github.com/PrismLauncher/PrismLauncher)
 - [Hide toolbar separator when the cat is disabled](https://github.com/PrismLauncher/PrismLauncher/pull/6476) _(merged 2026-11-16)_
