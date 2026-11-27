@@ -1,11 +1,16 @@
 # Contributions
 
 This page is automatically updated with all **public** merged pull requests by [@Vishrut2403](https://github.com/Vishrut2403), plus **3** shadow contributions.
-Total public PRs merged: **49** + 3 shadow
+Total public PRs merged: **50** + 3 shadow
 
-_Last updated: 2026-11-26_
+_Last updated: 2026-11-27_
 
 ---
+
+## [PCSX2/pcsx2](https://github.com/PCSX2/pcsx2)
+- [Qt: Preserve portable mode when restarting after AppImage updates](https://github.com/PCSX2/pcsx2/pull/15147) _(merged 2026-11-26)_
+- [ImGui: Add visual vibration intensity indicator to OSD](https://github.com/PCSX2/pcsx2/pull/14230) _(merged 2026-10-30)_
+- [Qt: Fix Big Picture Mode mnemonic shortcut lost after state change](https://github.com/PCSX2/pcsx2/pull/14245) _(merged 2026-05-03)_
 
 ## [blender/blender](https://projects.blender.org/blender/blender)
 - [Fix #114252: VSE: Hard split of a meta strip leaves an empty tail](https://projects.blender.org/blender/blender/pulls/167010) _(merged 2026-11-23)_
@@ -45,10 +50,6 @@ _Last updated: 2026-11-26_
 - [Prevent renaming instance folder while instance is running](https://github.com/PrismLauncher/PrismLauncher/pull/5822) _(merged 2026-07-25)_
 - [Fix instance shortcuts breaking when the instance is renamed](https://github.com/PrismLauncher/PrismLauncher/pull/5816) _(merged 2026-07-22)_
 - [Fix crash when opening mods tab after launching an instance](https://github.com/PrismLauncher/PrismLauncher/pull/5707) _(merged 2026-07-21)_
-
-## [PCSX2/pcsx2](https://github.com/PCSX2/pcsx2)
-- [ImGui: Add visual vibration intensity indicator to OSD](https://github.com/PCSX2/pcsx2/pull/14230) _(merged 2026-10-30)_
-- [Qt: Fix Big Picture Mode mnemonic shortcut lost after state change](https://github.com/PCSX2/pcsx2/pull/14245) _(merged 2026-05-03)_
 
 ## [RPCS3/rpcs3](https://github.com/RPCS3/rpcs3)
 - [ci: Label AI co-authored PRs and match [TESTERS NEEDED] rsx titles](https://github.com/RPCS3/rpcs3/pull/19922) _(merged 2026-10-23)_
