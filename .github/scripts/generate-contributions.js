@@ -81,6 +81,28 @@ async function fetchBlenderPRs() {
   return all;
 }
 
+// Seed from the existing file so entries are only ever added, never dropped or rewritten,
+// no matter which API is down or returns partial results today.
+function loadExistingRepos() {
+  const repos = new Map();
+  if (!fs.existsSync(OUT_FILE)) return repos;
+  for (const section of fs.readFileSync(OUT_FILE, "utf8").split("\n## ")) {
+    const head = section.match(/^\[([^\]]+)\]\((\S+)\)/);
+    if (!head) continue; // header text, Shadow Contributions, etc.
+    const prs = [...section.matchAll(/^- \[(.*)\]\((\S+)\) _\(merged (\d{4}-\d{2}-\d{2})\)_$/gm)].map(
+      ([, title, url, merged]) => ({ title, url, merged, type: "merged" })
+    );
+    if (prs.length) repos.set(head[1], { url: head[2], prs });
+  }
+  return repos;
+}
+
+function addPR(repoMap, repoName, repoUrl, pr) {
+  if (!repoMap.has(repoName)) repoMap.set(repoName, { url: repoUrl, prs: [] });
+  const entry = repoMap.get(repoName);
+  if (!entry.prs.some((p) => p.url === pr.url)) entry.prs.push(pr);
+}
+
 const repoCache = new Map();
 async function isRepoPublic(owner, repo) {
   const key = `${owner}/${repo}`;
@@ -136,6 +158,7 @@ async function loadManualContributions() {
 
   const valid = raw.filter((e) => e.pr_url && !e.pr_url.includes("<"));
 
+  const existing = fs.existsSync(OUT_FILE) ? fs.readFileSync(OUT_FILE, "utf8").split("\n") : [];
   const enriched = [];
   for (const e of valid) {
     const match = e.pr_url.match(/github\.com\/([^/]+)\/([^/]+)\/pull\/(\d+)/);
@@ -145,22 +168,26 @@ async function loadManualContributions() {
     }
     const [, owner, repo, number] = match;
 
-    try {
-      const pr = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}`);
-      enriched.push({
-        repo: `${owner}/${repo}`,
-        repo_url: `https://github.com/${owner}/${repo}`,
-        title: pr.title,
-        pr_url: e.pr_url,
-        commit_url: e.commit_url,
-        closed_at: fmtDate(pr.closed_at),
-        type: e.type,
-        note: e.note,
-      });
-      console.log(`  Enriched manual entry: ${owner}/${repo}#${number}`);
-    } catch (err) {
-      console.warn(`  Could not fetch PR ${e.pr_url}: ${err.message}`);
+    // Reuse the title already in the file; only hit the API for new entries.
+    let title = existing.find((l) => l.includes(`](${e.pr_url}) — `))?.match(/^- \[(.*)\]\(/)?.[1];
+    if (!title) {
+      try {
+        title = (await ghRequest(`/repos/${owner}/${repo}/pulls/${number}`)).title;
+        console.log(`  Enriched manual entry: ${owner}/${repo}#${number}`);
+      } catch (err) {
+        console.warn(`  Could not fetch PR ${e.pr_url}: ${err.message}`);
+        continue;
+      }
     }
+    enriched.push({
+      repo: `${owner}/${repo}`,
+      repo_url: `https://github.com/${owner}/${repo}`,
+      title,
+      pr_url: e.pr_url,
+      commit_url: e.commit_url,
+      type: e.type,
+      note: e.note,
+    });
   }
  
   return enriched;
@@ -175,29 +202,20 @@ async function main() {
   const rawPRs = await fetchMergedPRs();
   console.log(`Found ${rawPRs.length} merged PRs from search API`);
 
-  const repoMap = new Map(); 
+  const repoMap = loadExistingRepos();
+  console.log(`Loaded ${repoMap.size} repo(s) from existing ${OUT_FILE}`);
 
   for (const pr of rawPRs) {
     const parts = pr.repository_url.split("/").slice(-2);
     const repoFullName = parts.join("/");
     const [owner, repo] = parts;
 
-    if (!repoMap.has(repoFullName)) {
-      const pub = await isRepoPublic(owner, repo);
-      if (!pub) {
-        console.log(`  Skipping private repo: ${repoFullName}`);
-        continue;
-      }
-      repoMap.set(repoFullName, {
-        url: `https://github.com/${repoFullName}`,
-        prs: [],
-      });
+    if (!repoMap.has(repoFullName) && !(await isRepoPublic(owner, repo))) {
+      console.log(`  Skipping private repo: ${repoFullName}`);
+      continue;
     }
 
-    const entry = repoMap.get(repoFullName);
-    if (!entry) continue;
-
-    entry.prs.push({
+    addPR(repoMap, repoFullName, `https://github.com/${repoFullName}`, {
       title: pr.title,
       url: pr.html_url,
       merged: fmtDate(pr.closed_at),
@@ -208,19 +226,16 @@ async function main() {
   try {
     const blenderPRs = await fetchBlenderPRs();
     console.log(`Found ${blenderPRs.length} merged PRs on projects.blender.org`);
-    if (blenderPRs.length) {
-      repoMap.set("blender/blender", {
-        url: "https://projects.blender.org/blender/blender",
-        prs: blenderPRs.map((pr) => ({
-          title: pr.title,
-          url: pr.html_url,
-          merged: fmtDate(pr.pull_request.merged_at),
-          type: "merged",
-        })),
+    for (const pr of blenderPRs) {
+      addPR(repoMap, "blender/blender", "https://projects.blender.org/blender/blender", {
+        title: pr.title,
+        url: pr.html_url,
+        merged: fmtDate(pr.pull_request.merged_at),
+        type: "merged",
       });
     }
   } catch (err) {
-    console.warn(`  Could not fetch Blender PRs: ${err.message}`);
+    console.warn(`  Could not fetch Blender PRs, keeping existing list: ${err.message}`);
   }
 
   for (const data of repoMap.values()) {
